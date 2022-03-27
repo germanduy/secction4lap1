@@ -1,9 +1,7 @@
 package secction4lap1;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class PhoneBook extends Phone{
     public ArrayList<PhoneNumber> PhoneList = new ArrayList<>();
@@ -51,9 +49,16 @@ public class PhoneBook extends Phone{
 
     }
     public void sort(){
-
-
-    }
-
+        Collections.sort(PhoneList, new Comparator<PhoneNumber>() {
+            @Override
+            public int compare(PhoneNumber o1, PhoneNumber o2) {
+                return o1.name.compareTo(o2.name);
+            }
+        });
+        for(PhoneNumber p:PhoneList){
+            System.out.println(p.name);
+            System.out.println(p.phone);
+        }
+        }
 
 }

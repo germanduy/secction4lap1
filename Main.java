@@ -30,11 +30,10 @@ public class Main {
         a.searchPhone("Duy1");
         a.insertPhone("Duy7", "71");
         a.insertPhone("Duy8", "81");
+        a.insertPhone("Duy10", "101");
+        a.insertPhone("Duy9", "91");
         a.sort();
-        for(PhoneNumber pn : a.PhoneList){
-            System.out.println(pn.name);
-            System.out.println(pn.phone);
-        }
+
     }
 
 }
